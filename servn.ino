@@ -5,28 +5,22 @@
 
 //max clients
 #define MAX_SRV_CLIENTS 2
-
+//size of received/sent json structures
 #define JSON_SIZE 60
-//static ip for hub
 
+//static ip for hub
 IPAddress ip(192, 168, 1,103 );
 IPAddress gateway(192, 168, 1, 254);
 IPAddress subnet(255, 255, 255, 0);
 
-const char * ssid = "ROSTELECOM_A2E6";
-const char * password = "4N3R7K6D";
+const char * ssid = "SSID";
+const char * password = "WIFI_PASS";
 
 WiFiServer server(23);
 WiFiClient serverClients[MAX_SRV_CLIENTS];
-
-// Определение модели OLED
 long pushtime = 0;
 
 void setup() {
-   while (!Serial) {
-     ;
-   }
-
    pinMode(LED_BUILTIN, OUTPUT);
    digitalWrite(LED_BUILTIN, LOW);
    Serial.begin(115200);

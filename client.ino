@@ -7,9 +7,11 @@
 //size of received/sent json structures
 #define JSON_SIZE 60
 
+//server IP
 IPAddress ip(192, 168, 1, 103);
-const char * ssid = "ROSTELECOM_A2E6";
-const char * password = "4N3R7K6D";
+
+const char * ssid = "SSID";
+const char * password = "WIFI_PASS";
 
 int pushtime = 0;
 const int Port = 23;
@@ -18,10 +20,7 @@ short Status = 0;
 WiFiClient client;
 
 void setup() {
-   delay(5000);
-   while (!Serial) {
-     ;
-   }
+   delay(10000);
    
    Serial.begin(115200);
    pinMode(LED_BUILTIN, OUTPUT);
